@@ -16,6 +16,10 @@
       <%= f.label :password_confirmation %>
       <%= f.text_field :password_confirmation %>
 
+      <%= f.label :city_id %>
+      <%= f.select :city_id, City.all.collect {|c| [c.name, c.id]},
+        {}, class: "form-control" %>
+
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
   </div>
