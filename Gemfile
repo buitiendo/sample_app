@@ -17,6 +17,7 @@ gem "jquery-rails"
 gem "turbolinks", "~> 5"
 gem "kaminari"
 gem "bootstrap-kaminari-views"
+gem "cocoon"
 gem "jbuilder", "~> 2.5"
 gem "bootsnap", ">= 1.1.0", require: false
 

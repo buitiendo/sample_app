@@ -13,6 +13,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @user.profiles.build
   end
 
   def create
@@ -20,7 +21,7 @@ class UsersController < ApplicationController
     if @user.save
       login_user @user
       flash[:success] = "Welcome to the Sample App!"
-      redirect_to @user
+      redirect_to users_url
     else
       render :new
     end
@@ -49,7 +50,8 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :city_id)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :city_id,
+      profiles_attributes: [:id, :address, :_destroy])
   end
 
   def logged_in_user

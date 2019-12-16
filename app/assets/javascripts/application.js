@@ -1,3 +1,4 @@
+//= require cocoon
 //= require jquery
 //= require bootstrap
 //= require rails-ujs
