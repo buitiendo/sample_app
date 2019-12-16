@@ -16,6 +16,10 @@
   <%= f.label :city_id %>
   <%= f.select :city_id, City.all.collect {|c| [c.name, c.id]},
     {include_blank: true}, class: "form-control" %>
+  
+  <%= f.fields_for :profiles do |profile| %>
+    <%= render 'profile_fields', f: profile %>
+  <% end %>
 
-  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+  <%= f.submit "create", class: "btn btn-primary" %>
 <% end %>
