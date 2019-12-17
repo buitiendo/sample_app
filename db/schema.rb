@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2019_12_16_101616) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+    t.boolean "gender"
     t.string "email"
     t.integer "city_id"
     t.datetime "created_at", null: false
