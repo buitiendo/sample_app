@@ -7,6 +7,12 @@
   <%= f.label :email %>
   <%= f.email_field :email, class: "form-control" %>
 
+  <%= f.label :dob %>
+  <div class="input-group date" id="datetimepicker">
+    <%= f.text_field :dob, placeholder: "Select the date and time", class: "form-control" %>
+    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+  </div></br>
+
   <div class="row">
     <div class="col-md-2">
       <%= f.label :gender %>
@@ -31,7 +37,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div></br>
 
   <%= f.label :password %>
   <%= f.password_field :password, class: "form-control" %>
