@@ -3,6 +3,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
     create_table :users do |t|
       t.string :name
       t.boolean :gender
+      t.datetime :dob
       t.string :email
       t.references :city, foreign_key: true
 
