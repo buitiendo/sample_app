@@ -4,6 +4,8 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :name
       t.boolean :gender
       t.datetime :dob
+      t.boolean :role
+      t.text :description
       t.string :email
       t.references :city, foreign_key: true
 
