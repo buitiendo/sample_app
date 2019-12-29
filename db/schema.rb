@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 2019_12_16_101616) do
     t.string "name"
     t.boolean "gender"
     t.datetime "dob"
+    t.boolean "role"
+    t.text "description"
     t.string "email"
     t.integer "city_id"
     t.datetime "created_at", null: false

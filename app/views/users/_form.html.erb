@@ -45,6 +45,25 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation, class: "form-control" %>
 
+  <div class="row">
+    <div class="col-md-2">
+      <%= f.label :role %>
+    </div>
+    <div class="col-md-10">
+      <div class="form-group">
+        <div class="col-md-1">
+          <%= f.check_box :role, {}, true %>
+        </div>
+        <div class="col-md-11">
+          <%= f.label :role, "Admin"%></br>
+        </div>
+      </div>
+    </div>
+  </div></br>
+
+  <%= f.label :description %>
+  <%= f.text_area :description, cols: 2, rows: 6 %>
+
   <%= f.label :city_id %>
   <%= f.select :city_id, City.all.collect {|c| [c.name, c.id]},
     {include_blank: true}, class: "form-control" %>
